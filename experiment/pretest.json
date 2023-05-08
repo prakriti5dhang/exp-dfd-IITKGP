@@ -1,0 +1,31 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "A DFD represents",
+      "answers": {
+        "a": "Flow of control",
+        "b": "Flow of data",
+        "c":" Both of the above",
+        "d":"Neither one"       
+       
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which is not a component of a DFD?",
+      "answers": {
+        "a": "Data flow   ",
+        "b": "Decision ",
+        "c": "Process",
+        "d": "Data store"
+       
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
