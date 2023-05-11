@@ -38,7 +38,7 @@ function gonextp2(){
    // document.getElementById("backbtn2").disabled=true;
     document.getElementById("nextbtn2").disabled=true;
    
-    setTimeout(list21, 1500);
+    setTimeout(list21, 100);
     function list21(){
         document.getElementById("l21").style.display="block";
         setTimeout(list22, 1500);
@@ -74,7 +74,7 @@ function gonextp3(){
     document.getElementById("p31").style.display="block";
     document.getElementById("nextbtn3").style.display="none";
     document.getElementById("head1").innerHTML="Level 0 DFD";
-    setTimeout(d1, 2500);
+    setTimeout(d1,100);
 
   
     //document.getElementById("backbtn3").disabled=true;
@@ -83,8 +83,6 @@ function gonextp3(){
   
 
     function d1(){
-        
-       
         document.getElementById("d1").style.display="block";
         setTimeout(p32, 1500);
         
@@ -120,7 +118,7 @@ function gonextp4(){
 
 
 function img2(){
-    document.getElementById("p41").style.display="none";
+    
     document.getElementById("1.1pl").style.display="block";
     setTimeout(img3, 1500);
  
@@ -133,6 +131,7 @@ function img3(){
 }
 
 function p42(){
+    document.getElementById("p41").style.display="none";
     document.getElementById("p42").style.display="block";
     setTimeout(img4, 4000);
  
