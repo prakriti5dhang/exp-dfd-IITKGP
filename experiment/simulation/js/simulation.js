@@ -73,7 +73,7 @@ function gonextp3(){
     document.getElementById("p3").style.display="block";
     document.getElementById("p31").style.display="block";
     document.getElementById("nextbtn3").style.display="none";
-    document.getElementById("head1").innerHTML="Level 0 DFD";
+    document.getElementById("head1").innerHTML="1. Level 0 DFD";
     setTimeout(d1,100);
 
   
@@ -104,7 +104,7 @@ function gonextp3(){
 
 function gonextp4(){
     document.getElementById("step2").style.display="block";
-    document.getElementById("head1").innerHTML="Higher Levels of DFD";
+    document.getElementById("head1").innerHTML="2. Higher Levels of DFD";
     document.getElementById("p3").style.display="none";
     document.getElementById("p31").style.display="none";
     document.getElementById("p32").style.display="none";
