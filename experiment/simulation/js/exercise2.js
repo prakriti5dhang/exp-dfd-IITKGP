@@ -361,7 +361,7 @@ document.getElementById("inp22").value="";
 /***************************************************** Function for Table 4 ***************************************************/
 var arrparallelact=[];
 /* display input for synchronisation bar*/
-function addbtnt4(){
+function addbtnt24(){
     document.getElementById("synchinp1").style.display="block";
 }
 
