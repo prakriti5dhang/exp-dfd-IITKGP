@@ -167,6 +167,7 @@ newuLi.appendChild(newLi);
     alert("Please Enter Process Level Before Clicking Add Button");
   }
   
+  
   else{
     document.getElementById("process_" +inpt1 ).appendChild(newuLi);
     var pl= inpt2+"("+inpt3+")";
@@ -211,7 +212,12 @@ document.getElementById("inp3").value="";
 }
 
 
-
+/*function checknumber(){
+  if (isNaN(inpt3)) 
+  {
+    alert("Must input numbers");
+  }
+}*/
 
 
 
@@ -249,6 +255,7 @@ newuLin.appendChild(newLin);
   } 
   
   else{
+    arrdatastore.push(inpt4);
    document.getElementById("ds_"+inpt1 ).appendChild(newuLin);
 
 
@@ -297,7 +304,7 @@ function addbtnt4(){
   
 
 inpt5=document.getElementById("inp5").value;
-arrdatal.push(inpt5);
+
 //console.log(arrevent);
 inpt5=document.getElementById("inp5").value;
 selt1= document.getElementById("selecttype1");
@@ -306,7 +313,7 @@ selfrom= document.getElementById("selectfrom");
 selfromv =selfrom.options[selfrom.selectedIndex].text;
 
 inpt5=document.getElementById("inp5").value;
-arrdatal.push(inpt5);
+
 //console.log(arrdatal);
 selt2= document.getElementById("selecttype2");
 t2val =selt2.options[selt2.selectedIndex].text;
@@ -336,6 +343,8 @@ else if (seltov=="Select"){
   alert("A Data Label is necessary for a data flow to occur! Please specify it.");
  }
 else{
+  arrdatal.push(inpt5);
+  //console.log(arrdatal);
  tr = document.createElement('tr');
   tr.setAttribute("id","t6st");
   document.getElementById('tbodyt6').appendChild(tr);
@@ -444,15 +453,15 @@ function drawbtex1(){
   exentity.resize(100, 40);
   exentity.attr({
       body: {
-          rx: 3, // add a corner radius
-          ry: 3,
-          fill: '#FFFC8C',
+          rx: 4, // add a corner radius
+          ry: 4,
+          fill: '#FBFFBC ',
           strokeWidth: 2
       },
       label: {
           text: arrentity[0],
           
-          fill: 'black',
+          fill: 'red',
           fontSize: 16
       }
   });
@@ -460,17 +469,19 @@ function drawbtex1(){
 
   var process = new joint.shapes.standard.Ellipse();
         
-  process.position(148, 356);
-  process.resize(100, 40);
+  process.position(148, 286);
+  process.resize(100, 50);
   process.attr({
       body: {
-          fill: '#FFFC8C',
+        
+        ry: 80,
+          fill: '#BAFEF6 ',
           strokeWidth: 2
       },
       label: {
          
           text:arrprocess[0],
-          fill: 'black',
+          fill: 'red',
           fontSize: 16
       }
   });
@@ -479,25 +490,133 @@ function drawbtex1(){
 
   var db = new joint.shapes.standard.Rectangle();
         
-  db.position(416, 116);
+  db.position(420, 63);
   db.resize(100, 40);
   db.attr({
       body: {
-          rx: 3, // add a corner radius
-          ry: 3,
-          fill: '#FFFC8C',
-          strokeWidth: 2
+         
+          fill: '#FBFBF5',
+          strokeWidth: 1
       },
       label: {
-          text: arrdatastore[1],
-          fill: 'black',
+          text: arrdatastore[0],
+          fill: 'red',
           fontSize: 16
       }
   });
   db.addTo(graph);
 
   
+  var msg1 = new joint.shapes.standard.Rectangle();
+        
+  msg1.position(106, 168);
+  msg1.resize(100, 40);
+  msg1.rotate(270);
+  msg1.attr({
+      body: {
 
+          fill: '#FFFFFF',
+          strokeWidth: 0
+      },
+      label: {
+          text: arrdatal[0],
+          fill: 'black',
+          fontSize: 16
+      }
+  });
+ msg1.addTo(graph);
+
+ var msg2 = new joint.shapes.standard.Rectangle();
+        
+  msg2.position(137, 168);
+  msg2.resize(100, 40);
+  msg2.rotate(270);
+  
+  msg2.attr({
+      body: {
+
+          fill: '#FFFFFF',
+          strokeWidth: 0,
+          
+      },
+      label: {
+          text: arrdatal[1],
+          fill: 'black',
+          fontSize: 16,
+          
+      }
+  });
+ msg2.addTo(graph);
+
+ var msg3 = new joint.shapes.standard.Rectangle();
+        
+  msg3.position(193,168);
+  msg3.resize(100, 40);
+  msg3.rotate(270);
+  msg3.attr({
+      body: {
+
+          fill: '#FFFFFF',
+          strokeWidth: 0
+      },
+      label: {
+          text: arrdatal[2],
+          
+          fill: 'black',
+          fontSize: 16
+      }
+  });
+ msg3.addTo(graph);
+
+
+
+ var msg4 = new joint.shapes.standard.Rectangle();
+        
+  msg4.position(398, 162);
+  msg4.resize(100, 40);
+  //msg1.transform(90);
+  msg4.attr({
+      body: {
+
+          fill: '#FFFFFF',
+          strokeWidth: 0
+      },
+      label: {
+          text: arrdatal[3],
+          fill: 'black',
+          fontSize: 16
+      }
+  });
+ msg4.addTo(graph);
+
+  var arrow = new joint.shapes.standard.Image();
+  arrow.resize(15, 12);
+  arrow.position(161,279);
+//actor1.position(103, 15);
+arrow.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+
+arrow.attr('image/xlinkHref', 'images/arrowd.png');
+arrow.addTo(graph);
+
+  var arrow1 = new joint.shapes.standard.Image();
+      arrow1.resize(15, 12);
+      arrow1.position(191,274);
+  //actor1.position(103, 15);
+  arrow1.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+ 
+  arrow1.attr('image/xlinkHref', 'images/arrowd.png');
+  arrow1.addTo(graph);
+
+   var arrow2 = new joint.shapes.standard.Image();
+      arrow2.resize(15, 12);
+      arrow2.position(221,103);
+  //actor1.position(103, 15);
+  arrow2.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+ 
+  arrow2.attr('image/xlinkHref', 'images/arrowup.png');
+  arrow2.addTo(graph);
+
+        
   /*joint.shapes.standard.Link.define('examples.CustomLink', {
     attrs: {
         line: {
@@ -512,16 +631,32 @@ function drawbtex1(){
     
   });*/
 
-
-
-
-      
-
+ /* paper.options.defaultConnector={
+    name:'rounded',
+    args:{
+      radius:20
+    }
+  }*/
+  
 var link1 = new joint.shapes.standard.Link();
 link1.source(exentity);
 link1.target(process);
-link1.addTo(graph);
-        link1.appendLabel({
+link1.attr({
+  line: {
+    strokeWidth: 2,
+     //strokeDasharray: '4 2',
+    targetMarker: { 
+      'stroke':'blue',
+      'type':'path',
+      'stroke-width': 2,
+      //'fill': 'blue',
+      'd':'M 0 -30  L 180 -30 L 2 -30  ',
+      //'d': 'M 50 -80 L 220 -80 V -80'
+  }
+  
+}
+});
+        /*link1.appendLabel({
           attrs: {
               text: {
                   text: arrdatal[0],
@@ -532,40 +667,50 @@ link1.addTo(graph);
         position: {
           distance: 0.25
       }
-      });
+      });*/
       link1.addTo(graph);
 
 var link2 = new joint.shapes.standard.Link();
-link2.position(164, 386);
+
 link2.source(exentity);
 link2.target(process);
+link2.attr({
+  line: {
+    strokeWidth: 2,
+     //strokeDasharray: '4 2',
+    targetMarker: { 
+      'stroke':'blue',
+      'type':'path',
+      'stroke-width': 2,
+      //'fill': 'blue',
+      'd':'M 20 30  L 180 30 L 2 30  ',
+      //'d': 'M 50 -80 L 220 -80 V -80'
+  }
+  
+}
+});
+       
 link2.addTo(graph);
-        link2.appendLabel({
-          attrs: {
-              text: {
-                  text: arrdatal[1],
-                  fontSize: 16
-              },
-              position: {
-                distance: 0.15
-            }  
-        }
-      });
-      link2.addTo(graph);
 
       var link3 = new joint.shapes.standard.Link();
       link3.source(process);
       link3.target(exentity);
-      link3.addTo(graph);
-              link3.appendLabel({
-                attrs: {
-                    text: {
-                        text: arrdatal[2],
-                        fontSize: 16
-                    }
-                    
-              }
-            });
+      link3.attr({
+        line: {
+          strokeWidth: 2,
+           //strokeDasharray: '4 2',
+          targetMarker: { 
+            'stroke':'blue',
+            'type':'path',
+            'stroke-width': 2,
+            //'fill': 'blue',
+            'd':'M 20 0  L 180 0 L 2 0  ',
+            //'d': 'M 50 -80 L 220 -80 V -80'
+        }
+        
+    }
+      });
+             
             link3.addTo(graph);
 
 
@@ -573,15 +718,16 @@ link2.addTo(graph);
             link4.source(db);
             link4.target(process);
             link4.addTo(graph);
-                    link4.appendLabel({
-                      attrs: {
-                          text: {
-                              text: arrdatal[3],
-                              fontSize: 16
-                          }
-                          
-                    }
-                  });
+            link4.attr({
+              line: {
+                strokeWidth: 2,
+                'stroke':'blue',
+                'type':'path',
+                 //strokeDasharray: '4 2',
+                
+              
+            }
+            });
                   link4.addTo(graph);
 
 
