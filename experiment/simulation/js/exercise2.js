@@ -558,7 +558,7 @@ dsl2.attr({
         strokeWidth: 0
     },
     label: {
-        text: arrdatastore[0],
+        text: arrdatastore2[0],
         fill: 'red',
         fontSize: 16
     }
@@ -566,11 +566,11 @@ dsl2.attr({
 dsl2.addTo(graph);     
 
   
-  /*var msg1 = new joint.shapes.standard.Rectangle();
+  var msg1 = new joint.shapes.standard.Rectangle();
         
-  msg1.position(111, 209);
+  msg1.position(71, 119);
   msg1.resize(100, 40);
-  msg1.rotate(270);
+  //msg1.rotate(315);
   msg1.attr({
       body: {
 
@@ -578,7 +578,7 @@ dsl2.addTo(graph);
           strokeWidth: 0
       },
       label: {
-          text: arrdatal[0],
+          text: arrdatal2[0],
           fill: 'black',
           fontSize: 16
       }
@@ -587,7 +587,7 @@ dsl2.addTo(graph);
 
  var msg2 = new joint.shapes.standard.Rectangle();
         
-  msg2.position(144, 210);
+  msg2.position(169, 187);
   msg2.resize(100, 40);
   msg2.rotate(270);
   
@@ -599,7 +599,7 @@ dsl2.addTo(graph);
           
       },
       label: {
-          text: arrdatal[1],
+          text: arrdatal2[1],
           fill: 'black',
           fontSize: 16,
           
@@ -609,7 +609,7 @@ dsl2.addTo(graph);
 
  var msg3 = new joint.shapes.standard.Rectangle();
         
-  msg3.position(206,210);
+  msg3.position(204,185);
   msg3.resize(100, 40);
   msg3.rotate(270);
   msg3.attr({
@@ -619,7 +619,7 @@ dsl2.addTo(graph);
           strokeWidth: 0
       },
       label: {
-          text: arrdatal[2],
+          text: arrdatal2[2],
           
           fill: 'black',
           fontSize: 16
@@ -631,7 +631,7 @@ dsl2.addTo(graph);
 
  var msg4 = new joint.shapes.standard.Rectangle();
         
-  msg4.position(414, 200);
+  msg4.position(310, 116);
   msg4.resize(100, 40);
   //msg1.transform(90);
   msg4.attr({
@@ -641,40 +641,73 @@ dsl2.addTo(graph);
           strokeWidth: 0
       },
       label: {
-          text: arrdatal[3],
+          text: arrdatal2[3],
           fill: 'black',
           fontSize: 16
       }
   });
  msg4.addTo(graph);
 
-  var arrow = new joint.shapes.standard.Image();
-  arrow.resize(15, 12);
-  arrow.position(171,326);
-//actor1.position(103, 15);
-arrow.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+ var msg5 = new joint.shapes.standard.Rectangle();
+        
+  msg5.position(60, 386);
+  msg5.resize(100, 40);
+  //msg1.transform(90);
+  msg5.attr({
+      body: {
 
-arrow.attr('image/xlinkHref', 'images/arrowd.png');
-arrow.addTo(graph);
+          fill: '#FFFFFF',
+          strokeWidth: 0
+      },
+      label: {
+          text: arrdatal2[4],
+          fill: 'black',
+          fontSize: 16
+      }
+  });
+ msg5.addTo(graph);
 
-  var arrow1 = new joint.shapes.standard.Image();
-      arrow1.resize(15, 12);
-      arrow1.position(201,324);
-  //actor1.position(103, 15);
-  arrow1.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+
+ var msg6 = new joint.shapes.standard.Rectangle();
+        
+  msg6.position(172, 410);
+  msg6.resize(100, 40);
+  msg6.rotate(270);
+  msg6.attr({
+      body: {
+
+          fill: '#FFFFFF',
+          strokeWidth: 0
+      },
+      label: {
+          text: arrdatal2[5],
+          fill: 'black',
+          fontSize: 16
+      }
+  });
+ msg6.addTo(graph);
+
+
+ var msg7 = new joint.shapes.standard.Rectangle();
+        
+  msg7.position(352,322);
+  msg7.resize(100, 40);
+  //msg1.transform(90);
+  msg7.attr({
+      body: {
+
+          fill: '#FFFFFF',
+          strokeWidth: 0
+      },
+      label: {
+          text: arrdatal2[6],
+          fill: 'black',
+          fontSize: 16
+      }
+  });
+ msg7.addTo(graph);
+
  
-  arrow1.attr('image/xlinkHref', 'images/arrowd.png');
-  arrow1.addTo(graph);
-
-   var arrow2 = new joint.shapes.standard.Image();
-      arrow2.resize(15, 12);
-      arrow2.position(230,114);
-  //actor1.position(103, 15);
-  arrow2.attr('root/title', 'joint.shapes.standard.BoarderedImage');
- 
-  arrow2.attr('image/xlinkHref', 'images/arrowup.png');
-  arrow2.addTo(graph);
-*/
         
   /*joint.shapes.standard.Link.define('examples.CustomLink', {
     attrs: {
