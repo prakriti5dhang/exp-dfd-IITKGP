@@ -177,13 +177,13 @@ newuLi.appendChild(newLi);
     newOptionIDp = 'newOption_' + inpt2;
       
     let newOptionp = document.createElement('option');
-    let optionTextp = document.createTextNode(inpt2);
+    let optionTextp = document.createTextNode(pl);
     // set option text
     newOptionp.appendChild(optionTextp);
     // and option value
     
     newOptionp.setAttribute("id", newOptionIDp);
-    newOptionp.setAttribute('value',inpt2);
+    newOptionp.setAttribute('value',pl);
     let selectp = document.getElementById('selectfrom'); 
     selectp.appendChild(newOptionp);
 
@@ -192,13 +192,13 @@ newuLi.appendChild(newLi);
 newOptionIDpt = 'newOption_' + inpt2;
   
 let newOptionpt = document.createElement('option');
-let optionTextpt = document.createTextNode(inpt2);
+let optionTextpt = document.createTextNode(pl);
 // set option text
 newOptionpt.appendChild(optionTextpt);
 // and option value
 
 newOptionpt.setAttribute("id", newOptionIDpt);
-newOptionpt.setAttribute('value',inpt2);
+newOptionpt.setAttribute('value',pl);
 let selectpt = document.getElementById('selectto'); 
 selectpt.appendChild(newOptionpt);
 
