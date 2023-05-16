@@ -450,7 +450,7 @@ function drawbtex1(){
   var exentity = new joint.shapes.standard.Rectangle();
         
   exentity.position(148, 65);
-  exentity.resize(100, 40);
+  exentity.resize(120, 50);
   exentity.attr({
       body: {
           rx: 4, // add a corner radius
@@ -469,8 +469,8 @@ function drawbtex1(){
 
   var process = new joint.shapes.standard.Ellipse();
         
-  process.position(148, 286);
-  process.resize(100, 50);
+  process.position(148, 335);
+  process.resize(120, 50);
   process.attr({
       body: {
         
@@ -488,28 +488,40 @@ function drawbtex1(){
   process.addTo(graph);
 
 
-  var db = new joint.shapes.standard.Rectangle();
+  
+  var db = new joint.shapes.standard.Image();
+  db.resize(120, 50);
+  db.position(471,65);
+//actor1.position(103, 15);
+db.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+//db.attr('label/text', arrdatastore[0]);
+//db.attr('label/fontSize', 16);
+db.attr('image/xlinkHref', 'images/datastore.png');
+db.addTo(graph); 
+ 
+var dsl = new joint.shapes.standard.Rectangle();
         
-  db.position(420, 63);
-  db.resize(100, 40);
-  db.attr({
-      body: {
-         
-          fill: '#FBFBF5',
-          strokeWidth: 1
-      },
-      label: {
-          text: arrdatastore[0],
-          fill: 'red',
-          fontSize: 16
-      }
-  });
-  db.addTo(graph);
+dsl.position(484, 71);
+dsl.resize(100, 40);
+
+dsl.attr({
+    body: {
+
+        fill: '#FFFFFF',
+        strokeWidth: 0
+    },
+    label: {
+        text: arrdatastore[0],
+        fill: 'red',
+        fontSize: 16
+    }
+});
+dsl.addTo(graph);     
 
   
   var msg1 = new joint.shapes.standard.Rectangle();
         
-  msg1.position(106, 168);
+  msg1.position(111, 209);
   msg1.resize(100, 40);
   msg1.rotate(270);
   msg1.attr({
@@ -528,7 +540,7 @@ function drawbtex1(){
 
  var msg2 = new joint.shapes.standard.Rectangle();
         
-  msg2.position(137, 168);
+  msg2.position(144, 210);
   msg2.resize(100, 40);
   msg2.rotate(270);
   
@@ -550,7 +562,7 @@ function drawbtex1(){
 
  var msg3 = new joint.shapes.standard.Rectangle();
         
-  msg3.position(193,168);
+  msg3.position(206,210);
   msg3.resize(100, 40);
   msg3.rotate(270);
   msg3.attr({
@@ -572,7 +584,7 @@ function drawbtex1(){
 
  var msg4 = new joint.shapes.standard.Rectangle();
         
-  msg4.position(398, 162);
+  msg4.position(414, 200);
   msg4.resize(100, 40);
   //msg1.transform(90);
   msg4.attr({
@@ -591,7 +603,7 @@ function drawbtex1(){
 
   var arrow = new joint.shapes.standard.Image();
   arrow.resize(15, 12);
-  arrow.position(161,279);
+  arrow.position(171,326);
 //actor1.position(103, 15);
 arrow.attr('root/title', 'joint.shapes.standard.BoarderedImage');
 
@@ -600,7 +612,7 @@ arrow.addTo(graph);
 
   var arrow1 = new joint.shapes.standard.Image();
       arrow1.resize(15, 12);
-      arrow1.position(191,274);
+      arrow1.position(201,324);
   //actor1.position(103, 15);
   arrow1.attr('root/title', 'joint.shapes.standard.BoarderedImage');
  
@@ -609,7 +621,7 @@ arrow.addTo(graph);
 
    var arrow2 = new joint.shapes.standard.Image();
       arrow2.resize(15, 12);
-      arrow2.position(221,103);
+      arrow2.position(230,114);
   //actor1.position(103, 15);
   arrow2.attr('root/title', 'joint.shapes.standard.BoarderedImage');
  
@@ -650,7 +662,7 @@ link1.attr({
       'type':'path',
       'stroke-width': 2,
       //'fill': 'blue',
-      'd':'M 0 -30  L 180 -30 L 2 -30  ',
+      'd':'M 0 -30  L 220 -30 L 2 -30  ',
       //'d': 'M 50 -80 L 220 -80 V -80'
   }
   
@@ -683,7 +695,7 @@ link2.attr({
       'type':'path',
       'stroke-width': 2,
       //'fill': 'blue',
-      'd':'M 20 30  L 180 30 L 2 30  ',
+      'd':'M 20 30  L 220 30 L 2 30  ',
       //'d': 'M 50 -80 L 220 -80 V -80'
   }
   
@@ -704,7 +716,7 @@ link2.addTo(graph);
             'type':'path',
             'stroke-width': 2,
             //'fill': 'blue',
-            'd':'M 20 0  L 180 0 L 2 0  ',
+            'd':'M 20 0  L 220 0 L 2 0  ',
             //'d': 'M 50 -80 L 220 -80 V -80'
         }
         
