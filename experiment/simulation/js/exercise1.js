@@ -327,7 +327,7 @@ seltov =selto.options[selto.selectedIndex].text;
     alert("Select external entity or process or data store from second 'Type(P/DS/EE)' drop down list");
    }
   else if(t1val==t2val){
-alert("A system should not have any data flown from "+t1val+ " to"+t2val );
+alert("A system should not have any data flown from "+t1val+ " to" +t2val );
 }
 if(selfromv=="Select") {
   alert("Select external entity or process or data store for 'From' from the drop down list");
@@ -336,12 +336,20 @@ else if (seltov=="Select"){
   alert("Select external entity or process or data store for 'to' from the drop down list");
  }
  else if(selfromv==seltov){
-  alert("A system should not have any data flow from "+selfromv+ " to"+seltov );
+  alert("A system should not have any data flow from "+selfromv+ " to" +seltov );
   }
  
  else if(inpt5 == ""){
   alert("A Data Label is necessary for a data flow to occur! Please specify it.");
  }
+ else if((t1val=="External entity")&&(t2val=="Data store") ) {
+  alert("A system should not have any data flown from "+t1val+ " to" +t2val);
+ }
+
+ else if((t2val=="External entity")&&(t1val=="Data store") ) {
+  alert("A system should not have any data flown from "+t1val+ " to" +t2val);
+ }
+
 else{
   arrdatal.push(inpt5);
   //console.log(arrdatal);
