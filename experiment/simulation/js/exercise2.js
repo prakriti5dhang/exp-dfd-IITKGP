@@ -587,11 +587,30 @@ dsl2.addTo(graph);
 
  var msg2 = new joint.shapes.standard.Rectangle();
         
-  msg2.position(169, 187);
+  msg2.position(60, 386);
   msg2.resize(100, 40);
-  msg2.rotate(270);
-  
+  //msg1.transform(90);
   msg2.attr({
+      body: {
+
+          fill: '#FFFFFF',
+          strokeWidth: 0
+      },
+      label: {
+          text: arrdatal2[1],
+          fill: 'black',
+          fontSize: 16
+      }
+  });
+ msg2.addTo(graph);
+
+ var msg3 = new joint.shapes.standard.Rectangle();
+        
+  msg3.position(169, 187);
+  msg3.resize(100, 40);
+  msg3.rotate(270);
+  
+  msg3.attr({
       body: {
 
           fill: '#FFFFFF',
@@ -599,41 +618,20 @@ dsl2.addTo(graph);
           
       },
       label: {
-          text: arrdatal2[1],
+          text: arrdatal2[2],
           fill: 'black',
           fontSize: 16,
           
       }
   });
- msg2.addTo(graph);
-
- var msg3 = new joint.shapes.standard.Rectangle();
-        
-  msg3.position(204,185);
-  msg3.resize(100, 40);
-  msg3.rotate(270);
-  msg3.attr({
-      body: {
-
-          fill: '#FFFFFF',
-          strokeWidth: 0
-      },
-      label: {
-          text: arrdatal2[2],
-          
-          fill: 'black',
-          fontSize: 16
-      }
-  });
  msg3.addTo(graph);
-
 
 
  var msg4 = new joint.shapes.standard.Rectangle();
         
-  msg4.position(310, 116);
+  msg4.position(172, 410);
   msg4.resize(100, 40);
-  //msg1.transform(90);
+  msg4.rotate(270);
   msg4.attr({
       body: {
 
@@ -650,9 +648,9 @@ dsl2.addTo(graph);
 
  var msg5 = new joint.shapes.standard.Rectangle();
         
-  msg5.position(60, 386);
+  msg5.position(204,185);
   msg5.resize(100, 40);
-  //msg1.transform(90);
+  msg5.rotate(270);
   msg5.attr({
       body: {
 
@@ -661,6 +659,7 @@ dsl2.addTo(graph);
       },
       label: {
           text: arrdatal2[4],
+          
           fill: 'black',
           fontSize: 16
       }
@@ -668,11 +667,12 @@ dsl2.addTo(graph);
  msg5.addTo(graph);
 
 
+
  var msg6 = new joint.shapes.standard.Rectangle();
         
-  msg6.position(172, 410);
+  msg6.position(310, 116);
   msg6.resize(100, 40);
-  msg6.rotate(270);
+  //msg1.transform(90);
   msg6.attr({
       body: {
 
@@ -686,6 +686,8 @@ dsl2.addTo(graph);
       }
   });
  msg6.addTo(graph);
+
+ 
 
 
  var msg7 = new joint.shapes.standard.Rectangle();
