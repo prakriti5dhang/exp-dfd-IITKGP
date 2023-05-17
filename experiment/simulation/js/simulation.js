@@ -31,7 +31,7 @@ function playsimulation(){
 
 function gonextp2(){
     document.getElementById("step1").style.display="block";
-    document.getElementById("head1").innerHTML="Level 0 DFD";
+    document.getElementById("head1").innerHTML="1. Level 0 DFD";
     document.getElementById("p2").style.display="block";
     document.getElementById("p1").style.display="none";
     document.getElementById("p21").style.display="none";
