@@ -648,7 +648,7 @@ dsl2.addTo(graph);
 
  var msg5 = new joint.shapes.standard.Rectangle();
         
-  msg5.position(204,185);
+  msg5.position(221,185);
   msg5.resize(100, 40);
   msg5.rotate(270);
   msg5.attr({
@@ -692,7 +692,7 @@ dsl2.addTo(graph);
 
  var msg7 = new joint.shapes.standard.Rectangle();
         
-  msg7.position(352,322);
+  msg7.position(357,326);
   msg7.resize(100, 40);
   //msg1.transform(90);
   msg7.attr({
@@ -709,7 +709,14 @@ dsl2.addTo(graph);
   });
  msg7.addTo(graph);
 
- 
+ var arrow = new joint.shapes.standard.Image();
+  arrow.resize(15, 12);
+  arrow.position(250,112);
+//actor1.position(103, 15);
+arrow.attr('root/title', 'joint.shapes.standard.BoarderedImage');
+
+arrow.attr('image/xlinkHref', 'images/arrowup.png');
+arrow.addTo(graph);
         
   /*joint.shapes.standard.Link.define('examples.CustomLink', {
     attrs: {
@@ -853,7 +860,14 @@ link2.addTo(graph);
                                   'type':'path',
                                    //strokeDasharray: '4 2',
                                   
-                                
+                                   targetMarker: { 
+                                    'stroke':'blue',
+                                    'type':'path',
+                                    'stroke-width': 2,
+                                    //'fill': 'blue',
+                                    'd':'M 0 -20  L 175 -20 L 2 -20  ',
+                                    //'d': 'M 50 -80 L 220 -80 V -80'
+                                }
                               }
                               });
 
